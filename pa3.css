@@ -1,0 +1,72 @@
+.input-group-prepend {
+  width: 10px ;
+}
+
+
+table {
+  border-collapse: collapse;
+  margin-top: 25px;
+}
+
+td {
+  border: 1px solid #999;
+  padding:0.5rem;
+  text-align: left;
+}
+
+td input {
+  border: 1px solid #999;
+  padding:0.5rem;
+  text-align: left;
+  width: 25px;
+  height:100%;
+  background-color:white;
+}
+
+.homeImage {
+  max-width:65%;
+  height:auto;
+  padding-left: 25rem;
+
+}
+
+.countDown {
+  color:green;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  background-color: #1c87c9;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  border: none;
+  color: #eeeeee;
+  cursor: pointer;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+@keyframes glowing {
+  0% {
+    background-color:#4d0066;
+    box-shadow: 0 0 5px #4d0066;
+  }
+  50% {
+    background-color: #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+  }
+  100% {
+    background-color:#ffff00;
+    box-shadow: 0 0 5px #ffff00;
+  }
+}
+th {
+  animation: glowing 1300ms infinite;
+}
