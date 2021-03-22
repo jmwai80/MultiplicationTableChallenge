@@ -14,6 +14,22 @@ td {
   text-align: left;
 }
 
+
+tr.even td.even { background-color: #ee22bb;
+}
+
+tr.even td.odd { background-color: #00ffbb;
+}
+
+tr.odd td.even { background-color: #ee44cc;
+}
+
+tr.odd td.odd { background-color: #7799dd;
+}
+
+.outer {
+  background-color: yellow !important: 
+}
 td input {
   border: 1px solid #999;
   padding:0.5rem;
@@ -39,7 +55,7 @@ td input {
   margin-right: auto;
 }
 
-th {
+.animated {
   background-color: #1c87c9;
   -webkit-border-radius: 60px;
   border-radius: 60px;
@@ -67,6 +83,12 @@ th {
     box-shadow: 0 0 5px #ffff00;
   }
 }
-th {
+.animated {
   animation: glowing 1300ms infinite;
+}
+.correct{
+  color: green;
+}
+.incorrect {
+  color:red;
 }
