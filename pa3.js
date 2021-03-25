@@ -32,8 +32,9 @@ $(document).ready(function(){
     /* append columns to table */
     $('.multiplication-table').append(tr);
 
-    /* QUESTION: is the random cell always in the 7799dd column? */
+    
     /*var randomInput = Math.ceil(Math.random() * inputValue);*/
+    /*sets the two random inputs to get a random row and colomn to have the multiplication be in*/
     var randomInput= Math.floor(Math.random()*Math.floor(inputValue))
     var randomInput2= Math.floor(Math.random()*Math.floor(inputValue))
    
@@ -49,7 +50,7 @@ $(document).ready(function(){
             tr.append($('<td class = "outer">'+ i +'</td>'));
           }
 
-
+          /*checks to see if the input is within the table and will the input value is correct*/
           if (i === randomInput && checkInput && j===randomInput2) {
             correctInputVal = i*j;
             tr.append($('<td class = ""><input type="text" id="InputField" name="  " form="my_form" class ="tdInput"/></td>'));
@@ -87,7 +88,7 @@ $(document).ready(function(){
       $("tr:odd td:even").css( "background-color", "#7799dd" );
       isEven = false;
     }
-    else {
+    else { /*if the number is not divisible by 2, run this color pattern */
       $("tr td:odd").css( "background-color", "#7799dd" );
       $("tr td:even").css( "background-color", "#00ffbb" );
     }
@@ -132,15 +133,13 @@ $(document).ready(function(){
 
       /* creating cell color change sequence based on odd/even input */
       if (count % 3 == 0) { 
-        if (isEven) {
+        if (isEven) { /*if the number is odd, run this color change pattern */
           if (a === "rgb(255, 255, 0)" && change) {
             $("tr td:odd").css( "background-color", "#00ffbb" );
             $("tr td:even").css( "background-color", "#7799dd" );
             $('.outer').css('background-color', '#b0c4de');
              change = false;
            
-
-            
            
           }
           else {
@@ -150,7 +149,7 @@ $(document).ready(function(){
             change = true;
           }
         }
-        else {
+        else { /*if the number is odd, run this color change pattern */
           if (a === "rgb(255, 255, 0)" && change) {
             $("tr:even td:odd").css( "background-color", "#00ffbb" );
             $("tr:even td:even").css( "background-color", "#7799dd" );
