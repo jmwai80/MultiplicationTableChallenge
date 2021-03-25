@@ -91,7 +91,7 @@ $(document).ready(function(){
       $("tr td:odd").css( "background-color", "#7799dd" );
       $("tr td:even").css( "background-color", "#00ffbb" );
     }
-    $('.outer').css('background-color', '#b0c4de'); /* set color for table horizontal and vertical header */
+    $('.outer').css('background-color', 'yellow'); /* set color for table horizontal and vertical header */
 
     var change = true;
     var a = $("tr td:odd").css( "background-color");
@@ -137,14 +137,16 @@ $(document).ready(function(){
             $("tr td:odd").css( "background-color", "#00ffbb" );
             $("tr td:even").css( "background-color", "#7799dd" );
             $('.outer').css('background-color', '#b0c4de');
-            isEven = false;
+             change = false;
+           
+
             
            
           }
           else {
             $("tr td:odd").css( "background-color", "#7799dd" );
             $("tr td:even").css( "background-color", "#00ffbb" );
-            $('.outer').css('background-color', '#b0c4de');
+            $('.outer').css('background-color', 'yellow');
             change = true;
           }
         }
@@ -154,7 +156,7 @@ $(document).ready(function(){
             $("tr:even td:even").css( "background-color", "#7799dd" );
             $("tr:odd td:odd").css( "background-color", "#7799dd");
             $("tr:odd td:even").css( "background-color", "#00ffbb" );
-            $('.outer').css('background-color', '#b0c4de');
+            $('.outer').css('background-color', 'yellow');
             change = false;
             
            
@@ -164,7 +166,7 @@ $(document).ready(function(){
             $("tr:even td:even").css( "background-color", "#00ffbb" );
             $("tr:odd td:odd").css( "background-color", "#00ffbb");
             $("tr:odd td:even").css( "background-color", "#7799dd" );
-            $('.outer').css('background-color', '#b0c4de');
+            $('.outer').css('background-color', 'yellow');
             change = true;
           }
 
