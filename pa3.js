@@ -72,7 +72,7 @@ $(document).ready(function(){
       //display error message indicating value greater than 20
       //refresh page
     }
-    if (!Number.isInteger(inputValue)) {
+    if (!Number.isInteger(inputValue) || inputValue % 1 !== 0) {
       alert("value is not an Interger! Try Again!")
       location.reload();
       //display error message indicating value is not int
