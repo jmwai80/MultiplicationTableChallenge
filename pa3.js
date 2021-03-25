@@ -31,8 +31,12 @@ $(document).ready(function(){
     /* append columns to table */
     $('.multiplication-table').append(tr);
 
-    /* QUESTION: is the random cell always in the first column? */
-    var randomInput = Math.ceil(Math.random() * inputValue);
+    /* QUESTION: is the random cell always in the 7799dd column? */
+    /*var randomInput = Math.ceil(Math.random() * inputValue);*/
+    var randomInput= Math.floor(Math.random()*Math.floor(inputValue))
+    var randomInput2= Math.floor(Math.random()*Math.floor(inputValue))
+   
+
     /* set random value for input cell */
     /* initialize binary variables for checking input and checking correctness */
     var checkInput = true;
@@ -44,7 +48,7 @@ $(document).ready(function(){
             tr.append($('<td class = "outer">'+ i +'</td>'));
           }
 
-          if (i === randomInput && checkInput) {
+          if (i === randomInput && checkInput && j===randomInput2) {
             correctInputVal = i*j;
             tr.append($('<td class = ""><input type="text" id="InputField" name="  " form="my_form" class ="tdInput"/></td>'));
             checkInput = false;
@@ -71,15 +75,15 @@ $(document).ready(function(){
 
     /* creating sequence for table cells color based on odd/even input */
     if (inputValue % 2 != 0) {
-      $("tr:even td:odd").css( "background-color", "#b3b0de" );
-      $("tr:even td:even").css( "background-color", "#b0dbde" );
-      $("tr:odd td:odd").css( "background-color", "#b0dbde");
-      $("tr:odd td:even").css( "background-color", "#b3b0de" );
+      $("tr:even td:odd").css( "background-color", "#7799dd" );
+      $("tr:even td:even").css( "background-color", "#00ffbb" );
+      $("tr:odd td:odd").css( "background-color", "#00ffbb");
+      $("tr:odd td:even").css( "background-color", "#7799dd" );
       isEven = false;
     }
     else {
-      $("tr td:odd").css( "background-color", "#b3b0de" );
-      $("tr td:even").css( "background-color", "#b0dbde" );
+      $("tr td:odd").css( "background-color", "#7799dd" );
+      $("tr td:even").css( "background-color", "#00ffbb" );
     }
     $('.outer').css('background-color', '#b0c4de'); /* set color for table horizontal and vertical header */
 
@@ -121,36 +125,36 @@ $(document).ready(function(){
       if (count % 3 == 0) { 
         if (isEven) {
           if (a === "rgb(255, 255, 0)" && change) {
-            $("tr td:odd").css( "background-color", "#b0dbde" );
-            $("tr td:even").css( "background-color", "#b3b0de" );
+            $("tr td:odd").css( "background-color", "#00ffbb" );
+            $("tr td:even").css( "background-color", "#7799dd" );
             $('.outer').css('background-color', '#b0c4de');
             change = false;
             
            
           }
           else {
-            $("tr td:odd").css( "background-color", "#b3b0de" );
-            $("tr td:even").css( "background-color", "#b0dbde" );
+            $("tr td:odd").css( "background-color", "#7799dd" );
+            $("tr td:even").css( "background-color", "#00ffbb" );
             $('.outer').css('background-color', '#b0c4de');
             change = true;
           }
         }
         else {
           if (a === "rgb(255, 255, 0)" && change) {
-            $("tr:even td:odd").css( "background-color", "#b0dbde" );
-            $("tr:even td:even").css( "background-color", "#b3b0de" );
-            $("tr:odd td:odd").css( "background-color", "#b3b0de");
-            $("tr:odd td:even").css( "background-color", "#b0dbde" );
+            $("tr:even td:odd").css( "background-color", "#00ffbb" );
+            $("tr:even td:even").css( "background-color", "#7799dd" );
+            $("tr:odd td:odd").css( "background-color", "#7799dd");
+            $("tr:odd td:even").css( "background-color", "#00ffbb" );
             $('.outer').css('background-color', '#b0c4de');
             change = false;
             
            
           }
           else {
-            $("tr:even td:odd").css( "background-color", "#b3b0de" );
-            $("tr:even td:even").css( "background-color", "#b0dbde" );
-            $("tr:odd td:odd").css( "background-color", "#b0dbde");
-            $("tr:odd td:even").css( "background-color", "#b3b0de" );
+            $("tr:even td:odd").css( "background-color", "#7799dd" );
+            $("tr:even td:even").css( "background-color", "#00ffbb" );
+            $("tr:odd td:odd").css( "background-color", "#00ffbb");
+            $("tr:odd td:even").css( "background-color", "#7799dd" );
             $('.outer').css('background-color', '#b0c4de');
             change = true;
           }
