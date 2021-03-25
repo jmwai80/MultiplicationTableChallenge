@@ -1,20 +1,27 @@
+/* Theodora Moldovan, John Mwai, Alice Pendergast
+Programming Assignment 3
+Multiplication Table Challenge
+COM 214
+3/25/21 */
+
 .input-group-prepend {
   width: 10px ;
 }
 
-
+/* Style border and margins for multiplication table */
 table {
   border-collapse: collapse;
   margin-top: 25px;
 }
 
+/* Style table header */
 td {
   border: 1px solid #999;
   padding:0.5rem;
   text-align: left;
 }
 
-
+/* Set alternating color pattern based on odd/even row and column numbers */
 tr.even td.even { background-color: #ee22bb;
 }
 
@@ -30,6 +37,8 @@ tr.odd td.odd { background-color: #7799dd;
 .outer {
   background-color: yellow !important: 
 }
+
+/* Set cell input box style */
 td input {
   border: 1px solid #999;
   padding:0.5rem;
@@ -39,6 +48,7 @@ td input {
   background-color:white;
 }
 
+/* Set intro image width and height */
 .homeImage {
   max-width:65%;
   height:auto;
@@ -46,15 +56,18 @@ td input {
 
 }
 
+/* Set text color to green for counter */
 .countDown {
   color:green;
 }
 
+/* Set centering margins to auto */
 .center {
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Set page style with background color, font type and size, alignment, etc. */
 .animated {
   background-color: #1c87c9;
   -webkit-border-radius: 60px;
@@ -69,6 +82,8 @@ td input {
   text-align: center;
   text-decoration: none;
 }
+
+/* Set glowing circle with three alternating colors */
 @keyframes glowing {
   0% {
     background-color:#4d0066;
@@ -83,12 +98,15 @@ td input {
     box-shadow: 0 0 5px #ffff00;
   }
 }
+/* Set duration and timing for glowing */
 .animated {
   animation: glowing 1300ms infinite;
 }
+/* Set text color for correct answer to green */
 .correct{
   color: green;
 }
+/* Set text color for incorrect answer to red */
 .incorrect {
   color:red;
 }
