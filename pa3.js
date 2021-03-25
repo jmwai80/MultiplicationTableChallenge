@@ -98,6 +98,7 @@ $(document).ready(function(){
     var a = $("tr td:odd").css( "background-color");
     /* Setting interval function for countdown timer */
     timer = setInterval(function() {
+      $( ".countDown").show();
       count = count - 1;
 
       if (count === 0){
@@ -171,6 +172,7 @@ $(document).ready(function(){
 
         }
       }
+
       $(".countDown").html(count + " SECONDS LEFT")
       /* update countdown information in html file */  
 
