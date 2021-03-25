@@ -20,6 +20,8 @@ $(document).ready(function(){
     $('.multiplication-table').append(tr);
 
     var randomInput = Math.ceil(Math.random() * inputValue);
+    var randomInput2 = Math.ceil(Math.random() * inputValue);
+    alert(randomInput);
     var checkInput = true;
     var correctVal = false;
     for (var i=1; i<=inputValue; i++) {
@@ -29,7 +31,7 @@ $(document).ready(function(){
             tr.append($('<td class = "outer">'+ i +'</td>'));
           }
 
-          if (i === randomInput && checkInput) {
+          if (i === randomInput && j===randomInput2 && checkInput) {
             correctInputVal = i*j;
             tr.append($('<td class = ""><input type="text" id="InputField" name="  " form="my_form" class ="tdInput"/></td>'));
             checkInput = false;
@@ -75,6 +77,9 @@ $(document).ready(function(){
             $(".homeImage").show();
             $( ".correct" ).hide();
             $( ".incorrect" ).hide();
+            location.reload();
+
+
          },4000)
         // alert("user val " + key);
         // alert("correctInput " + correctInputVal)
@@ -129,7 +134,5 @@ $(document).ready(function(){
 
 
   });
-
-
 
 });
