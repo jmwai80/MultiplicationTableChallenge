@@ -15,21 +15,25 @@ $(document).ready(function(){
   $( ".incorrect" ).hide();
   /* Create function actions for when button is clicked */
   $("button").click(function(){
-    $( ".homeImage" ).hide(); /* hide intro image */
+    $( ".homeImage" ).hide();
+    /* hide intro image */
     inputValue = parseInt($("input:text").val());
-    var count = inputValue; /* set counter variable to user input value */
+    /* set counter variable to user input value */
+    var count = inputValue;
     /* Create multiplication table by writing to html file */
     $('.multiplication-table').html('');
     var tr;
-    tr = $('<tr></tr>'); 
-    tr.append($('<td class = "outer animated">' +'</td>')); /* append rows to table */
+    tr = $('<tr></tr>');
+    tr.append($('<td class = "outer animated">' +'</td>'));
     for (var k=1; k<=inputValue; k++) {
-        tr.append($('<td class = "outer">'+ k +'</td>')); 
+        tr.append($('<td class = "outer">'+ k +'</td>'));
     }
-    $('.multiplication-table').append(tr); /* append columns to table */
+    /* append columns to table */
+    $('.multiplication-table').append(tr);
 
     /* QUESTION: is the random cell always in the first column? */
-    var randomInput = Math.ceil(Math.random() * inputValue); /* set random value for input cell */
+    var randomInput = Math.ceil(Math.random() * inputValue);
+    /* set random value for input cell */
     /* initialize binary variables for checking input and checking correctness */
     var checkInput = true;
     var correctVal = false;
@@ -49,10 +53,13 @@ $(document).ready(function(){
             tr.append($('<td class = "inner">'+ i*j +'</td>'));}
         }
 
-        $('.multiplication-table').append(tr); /* append new column with random input cell to table */
+        /* append new column with random input cell to table */
+        $('.multiplication-table').append(tr);
     }
 
     var isEven = true;
+
+    //REMAINING 
     if (inputValue > 20) {
       //display error message indicating value greater than 20
       //refresh page
@@ -61,6 +68,7 @@ $(document).ready(function(){
       //display error message indicating value is not int
       //refresh page
     }
+
     /* creating sequence for table cells color based on odd/even input */
     if (inputValue % 2 != 0) {
       $("tr:even td:odd").css( "background-color", "#b3b0de" );
@@ -83,10 +91,12 @@ $(document).ready(function(){
 
       if (count === 0){
 
-        clearInterval(timer); /* clear timer  */
-        var key = parseInt($('#InputField').val()); /* evaluate user input from cell field */
+        clearInterval(timer);
+        var key = parseInt($('#InputField').val());
+        /* evaluate user input from cell field */
         /* check for input correctness and display correct/incorrect message */
-        if (key === InputVal) {
+
+        if (key === correctInputVal) {
            $(".correct").show();
         }
         else {
@@ -147,7 +157,8 @@ $(document).ready(function(){
 
         }
       }
-      $(".countDown").html(count + " SECONDS LEFT")  /* update countdown information in html file */    
+      $(".countDown").html(count + " SECONDS LEFT")
+      /* update countdown information in html file */  
 
     }, 1000)
 
