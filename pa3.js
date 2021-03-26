@@ -65,31 +65,31 @@ $(document).ready(function(){
 
     var isEven = true;
 
-    //REMAINING 
+     
     if (inputValue > 20) {
-      alert("Please input value less than 21")
+      alert("Please input a value less than or equal to 20")
       location.reload();
-      //display error message indicating value greater than 20
+      //display alert indicating value greater than 20
       //refresh page
     }
     if (!Number.isInteger(inputValue) || inputValue % 1 !== 0) {
-      alert("value is not an Interger! Try Again!")
+      alert("Value is not an integer. Try again!")
       location.reload();
-      //display error message indicating value is not int
+      //display alert indicating value is not int
       //refresh page
     }
 
     /* creating sequence for table cells color based on odd/even input */
     if (inputValue % 2 != 0) {
       $("tr:even td:odd").css( "background-color", "#7799dd" );
-      $("tr:even td:even").css( "background-color", "#00ffbb" );
-      $("tr:odd td:odd").css( "background-color", "#00ffbb");
+      $("tr:even td:even").css( "background-color", "#b0dbde" );
+      $("tr:odd td:odd").css( "background-color", "#b0dbde");
       $("tr:odd td:even").css( "background-color", "#7799dd" );
       isEven = false;
     }
     else { /*if the number is not divisible by 2, run this color pattern */
       $("tr td:odd").css( "background-color", "#7799dd" );
-      $("tr td:even").css( "background-color", "#00ffbb" );
+      $("tr td:even").css( "background-color", "#b0dbde" );
     }
     $('.outer').css('background-color', 'yellow'); /* set color for table horizontal and vertical header */
 
@@ -133,28 +133,28 @@ $(document).ready(function(){
 
       /* creating cell color change sequence based on odd/even input */
       if (count % 3 == 0) { 
-        if (isEven) { /*if the number is odd, run this color change pattern */
+        if (isEven) { /*if the number is even, run this color change pattern */
           if (a === "rgb(255, 255, 0)" && change) {
-            $("tr td:odd").css( "background-color", "#00ffbb" );
+            $("tr td:odd").css( "background-color", "#b0dbde" );
             $("tr td:even").css( "background-color", "#7799dd" );
-            $('.outer').css('background-color', '#b0c4de');
+            $('.outer').css('background-color', '#b3b0de');
              change = false;
            
            
           }
           else {
             $("tr td:odd").css( "background-color", "#7799dd" );
-            $("tr td:even").css( "background-color", "#00ffbb" );
+            $("tr td:even").css( "background-color", "#b0dbde" );
             $('.outer').css('background-color', 'yellow');
             change = true;
           }
         }
         else { /*if the number is odd, run this color change pattern */
           if (a === "rgb(255, 255, 0)" && change) {
-            $("tr:even td:odd").css( "background-color", "#00ffbb" );
+            $("tr:even td:odd").css( "background-color", "#b0dbde" );
             $("tr:even td:even").css( "background-color", "#7799dd" );
             $("tr:odd td:odd").css( "background-color", "#7799dd");
-            $("tr:odd td:even").css( "background-color", "#00ffbb" );
+            $("tr:odd td:even").css( "background-color", "#b0dbde" );
             $('.outer').css('background-color', 'yellow');
             change = false;
             
@@ -162,8 +162,8 @@ $(document).ready(function(){
           }
           else {
             $("tr:even td:odd").css( "background-color", "#7799dd" );
-            $("tr:even td:even").css( "background-color", "#00ffbb" );
-            $("tr:odd td:odd").css( "background-color", "#00ffbb");
+            $("tr:even td:even").css( "background-color", "#b0dbde" );
+            $("tr:odd td:odd").css( "background-color", "#b0dbde");
             $("tr:odd td:even").css( "background-color", "#7799dd" );
             $('.outer').css('background-color', 'yellow');
             change = true;
