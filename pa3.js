@@ -19,6 +19,21 @@ $(document).ready(function(){
     $( ".homeImage" ).hide();
     /* hide intro image */
     inputValue = parseInt($("input:text").val());
+
+    if (inputValue > 20) {
+      alert("Please input a value less than or equal to 20")
+      location.reload();
+      //display alert indicating value greater than 20
+      //refresh page
+      return
+    }
+    if (!Number.isInteger(inputValue) || inputValue % 1 !== 0) {
+      alert("Value is not an integer. Try again!")
+      location.reload();
+      return;
+      //display alert indicating value is not int
+      //refresh page
+    }
     /* set counter variable to user input value */
     var count = inputValue;
     /* Create multiplication table by writing to html file */
@@ -42,6 +57,8 @@ $(document).ready(function(){
     /* initialize binary variables for checking input and checking correctness */
     var checkInput = true;
     var correctVal = false;
+
+
     for (var i=1; i<=inputValue; i++) {
         tr = $('<tr></tr>');
         for (var j=1; j<= inputValue; j++) {
@@ -66,18 +83,7 @@ $(document).ready(function(){
     var isEven = true;
 
      
-    if (inputValue > 20) {
-      alert("Please input a value less than or equal to 20")
-      location.reload();
-      //display alert indicating value greater than 20
-      //refresh page
-    }
-    if (!Number.isInteger(inputValue) || inputValue % 1 !== 0) {
-      alert("Value is not an integer. Try again!")
-      location.reload();
-      //display alert indicating value is not int
-      //refresh page
-    }
+
 
     /* creating sequence for table cells color based on odd/even input */
     if (inputValue % 2 != 0) {
