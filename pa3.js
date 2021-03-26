@@ -35,9 +35,8 @@ $(document).ready(function(){
     
     /*var randomInput = Math.ceil(Math.random() * inputValue);*/
     /*sets the two random inputs to get a random row and colomn to have the multiplication be in*/
-    var randomInput= Math.floor(Math.random()*Math.floor(inputValue))
-    var randomInput2= Math.floor(Math.random()*Math.floor(inputValue))
-   
+    var randomInput= Math.floor(Math.random()*Math.ceil(inputValue)) + 1
+    var randomInput2= Math.floor(Math.random()*Math.ceil(inputValue)) + 1
 
     /* set random value for input cell */
     /* initialize binary variables for checking input and checking correctness */

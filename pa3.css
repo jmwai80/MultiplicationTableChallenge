@@ -110,3 +110,14 @@ td input {
 .incorrect {
   color:red;
 }
+
+#retro{
+  color: red;
+  text-shadow: 3px 3px 0px #2c2e38, 5px 5px 0px #5c5f72;
+  font: 80px 'BazarMedium';
+  letter-spacing: 6x;
+}
+
+#buttonN {
+  background-color: red;
+}
